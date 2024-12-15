@@ -1,0 +1,219 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header styles */
+header {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  max-width: 1920px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img {
+  max-height: 80vh;
+  width: auto;
+  margin-left: auto;
+  transform: translateX(20%);
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+header div.welcome {
+  z-index: 1;
+  top: 7%;
+  left: 5%;
+  right: 5%;
+  font-family: 'Saira Condensed', sans-serif;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Navbar styles */
+.bg-dark-transparent {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(5px);
+}
+
+.bg-dark-transparent .nav-link:hover {
+  color: #fff !important;
+  opacity: 1;
+}
+
+/* Blog section styles */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+}
+
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Slogan section - keeping original styles */
+.slogan {
+  text-align: center;
+  background-image: url(../images/motto.jpg);
+  background-size: cover;
+  background-position: top center;
+  color: white;
+  background-attachment: fixed;
+}
+
+.slogan h1 {
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 26px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.slogan p {
+  font-family: 'Saira', sans-serif;
+  font-size: 18px;
+}
+
+.slogan p.author {
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.slogan .bg {
+  background-color: rgba(0, 63, 114, 0.5);
+  padding: 30px 10px;
+}
+
+/* Contact section styles */
+.social {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: 10px 0;
+}
+
+.social i {
+  min-width: 40px;
+}
+
+.social a {
+  display: flex;
+  align-items: center;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (orientation: landscape) {
+  header img {
+    max-height: 90vh;
+    margin-top: auto;
+    align-self: flex-end;
+  }
+
+  header div.welcome {
+    top: 15%;
+    left: 7%;
+    right: 48%;
+  }
+  
+  .slogan p {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .slogan h1 {
+    margin-bottom: 35px;
+  }
+}
+
+@media (min-width: 768px) {
+  .slogan .bg {
+    padding: 50px 10px;
+  }
+
+  .slogan h1 {
+    font-size: 48px;
+    margin-bottom: 35px;
+  }
+
+  .slogan p {
+    font-size: 26px;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .slogan p.author {
+    margin-top: 40px;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .slogan .bg {
+    padding: 80px 10px;
+  }
+
+  .slogan h1 {
+    font-size: 60px;
+    margin-bottom: 55px;
+  }
+
+  .slogan p {
+    font-size: 40px;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .slogan p.author {
+    margin-top: 40px;
+    font-size: 26px;
+  }
+}
+
