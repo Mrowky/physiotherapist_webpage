@@ -15,7 +15,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-dark-transparent">
     <div class="container">
-      <a class="navbar-brand fs-3" href="#">Fizjoterapia Piotr Mrówczyński</a>
+      <a class="navbar-brand small-brand" href="#">Fizjoterapia Piotr Mrówczyński</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -39,14 +39,27 @@
   </nav>
 
   <header class="bg-primary text-white text-center py-5" style="background-image: url('images_fizjo/watercolor-5062356_1920.jpg'); background-size: cover; background-position: center;">
-    <div class="container header-container" style="padding: 4rem 0;">
-      <div class="welcome">
-        <h1 class="display-4">Fizjoterapia Bydgoszcz</h1>
-        <!-- <button class="btn btn-outline-light mt-3">Zobacz moje portfolio</button> -->
-      </div>
-      <img src="images_fizjo/main_bg_remove.png" alt="Zdjęcie Piotr Mrówczyński" class="img-fluid mt-4">
+    <div class="container row">
+        <div class="col-lg-6">
+          <div class="welcome">
+            <h1 class="display-4">Fizjoterapia Bydgoszcz</h1>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="images_fizjo/main_bg_remove.png" alt="Zdjęcie Piotr Mrówczyński" class="img-fluid mb-0">
+        </div>
     </div>
   </header>
+  <section id="about" class="py-5 mt-5"></section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <p>Witam!
+            Nazywam się Piotr Mrówczyński. Jestem dyplomowanym fizjoterapeutą. Ukończyłem studia na Uniwersytecie Mikołaja Kopernika w Toruniu Collegium Medicum w Bydgoszczy. Już w czasie studiów magisterskich zacząłem swoją przygodę w zawodzie fizjoterapeuty. Posiadam również tytuł  zawodowy neuroterapeuty oraz technika masażysty.Specjalizuje się w pracy z pacjentem ortopedycznym, bólowym, po wszelakich urazach i z ograniczeniami ruchomości. Zawsze staram się spojrzeć na pacjenta w jak najbardziej całościowy sposób. Na wizycie zapytam Cię, nie tylko o aktualne dolegliwości ale również o Twoją jakość snu, ilość stresu, odżywianie oraz przebyte zabiegi/ urazy. Wszystko to ma ogromne przełożenie, na to w jakim stanie jest nasze ciało oraz jak się regenerujemy. Skręcenie stawu skokowego sprzed 10 lat a obecny problem bólowy okolicy barku? Jak najbardziej może to być powiązane. Zapraszam na diagnostykę i terapię.</p>
+        </div>
+      </div>
+    </div>
+  </section>
   <section id="courses" class="py-5 mt-5">
     <div class="container">
       <div class="row align-items-center">
@@ -174,9 +187,7 @@
   </section>
 
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
 </body>
 
 </html>

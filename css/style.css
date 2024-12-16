@@ -5,48 +5,28 @@
   box-sizing: border-box;
 }
 
-/* Header styles */
 header {
   position: relative;
   height: 100vh;
-  margin-top: 0;
   overflow: hidden;
   max-width: 1920px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  align-items: center;
-  background-size: cover;
-  background-position: center;
+  margin: 0 auto;
 }
 
-header::before {
-  content: '';
+header > * {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
 }
-
 header .container {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 2rem;
+
+  bottom: 0;
+  right: 0;
 }
 
 header img {
-  max-height: 70vh;
-  width: auto;
-  margin: 0 auto;
-  align-self: center;
+  height: 70%;
+  bottom: 0;
+  right: 0;
 }
-
 header div.welcome {
   z-index: 1;
   top: 7%;
@@ -75,6 +55,22 @@ header div.welcome {
   top: 0;
   left: 0;
   z-index: 1030;
+}
+
+.small-brand {
+  font-size: 18px !important;
+}
+
+@media (min-width: 768px) {
+  .small-brand {
+    font-size: 24px !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .small-brand {
+    font-size: 30px !important;
+  }
 }
 
 /* Blog section styles */
@@ -164,9 +160,8 @@ header div.welcome {
     text-align: center;
   }
   header img {
-    max-width: 80%;
-    max-height: 55vh;
-    transform: none;
+    max-width: 100%;
+    max-height: 70vh;
   }
   header {
     height: 100vh;
