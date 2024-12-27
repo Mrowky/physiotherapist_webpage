@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Saira Condensed', sans-serif;
 }
 
 header {
@@ -32,10 +33,15 @@ header div.welcome {
   top: 7%;
   left: 5%;
   right: 5%;
-  font-family: 'Saira Condensed', sans-serif;
   color: white;
   text-align: center;
   text-transform: uppercase;
+}
+
+header div.welcome h1 {
+  /* margin-bottom: 25px; */
+  font-weight: bold;
+  letter-spacing: 4px;
 }
 
 /* Navbar styles */
@@ -73,7 +79,20 @@ header div.welcome {
   }
 }
 
-/* Blog section styles */
+/* O mnie section styles */
+.text-justify {
+  text-align: justify;
+}
+.img-same-height {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.img-top-position {
+  object-position: top;
+}
+
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -110,15 +129,8 @@ header div.welcome {
   background-attachment: fixed;
 }
 
-.slogan h1 {
-  font-family: 'Saira Condensed', sans-serif;
-  font-size: 26px;
-  text-transform: uppercase;
-  margin-bottom: 25px;
-}
 
 .slogan p {
-  font-family: 'Saira', sans-serif;
   font-size: 18px;
 }
 
@@ -154,21 +166,25 @@ header div.welcome {
   .blog-grid {
     grid-template-columns: 1fr;
   }
-  .header-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  header img {
+   div header img .img-fluid {
     max-width: 100%;
     max-height: 70vh;
   }
   header {
-    height: 100vh;
-    margin-top: 0;
+    height: 60vh;
   }
+  
   header .container {
-    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  header .row {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
   
@@ -191,19 +207,11 @@ header div.welcome {
     margin-right: auto;
   }
 
-  .slogan h1 {
-    margin-bottom: 35px;
-  }
 }
 
 @media (min-width: 768px) {
   .slogan .bg {
     padding: 50px 10px;
-  }
-
-  .slogan h1 {
-    font-size: 48px;
-    margin-bottom: 35px;
   }
 
   .slogan p {
@@ -223,20 +231,14 @@ header div.welcome {
     padding: 80px 10px;
   }
 
-  .slogan h1 {
-    font-size: 60px;
-    margin-bottom: 55px;
-  }
-
   .slogan p {
     font-size: 40px;
     width: 50%;
     margin: 0 auto;
   }
 
-  .slogan p.author {
-    margin-top: 40px;
-    font-size: 26px;
-  }
 }
+
+
+
 
