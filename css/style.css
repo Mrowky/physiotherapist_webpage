@@ -6,43 +6,7 @@
   font-family: 'Saira Condensed', sans-serif;
 }
 
-header {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  max-width: 1920px;
-  margin: 0 auto;
-}
-
-header > * {
-  position: absolute;
-}
-header .container {
-
-  bottom: 0;
-  right: 0;
-}
-
-header img {
-  height: 70%;
-  bottom: 0;
-  right: 0;
-}
-header div.welcome {
-  z-index: 1;
-  top: 7%;
-  left: 5%;
-  right: 5%;
-  color: white;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-header div.welcome h1 {
-  /* margin-bottom: 25px; */
-  font-weight: bold;
-  letter-spacing: 4px;
-}
+/* Header styles */
 
 
 
@@ -171,29 +135,10 @@ header div.welcome h1 {
 }
 
 /* Media queries */
+
 @media (max-width: 768px) {
   .blog-grid {
     grid-template-columns: 1fr;
-  }
-   div header img .img-fluid {
-    max-width: 100%;
-    max-height: 70vh;
-  }
-  header {
-    height: 70vh;
-  }
-  
-  header .container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-  
-  header .row {
-    margin: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
   }
 
   #about .row {
@@ -215,12 +160,7 @@ header div.welcome h1 {
     gap: 2rem;
   }
 }
-  
-@media (orientation: landscape) {
-  
 
-
-}
 
 @media (min-width: 768px) {
 
@@ -232,6 +172,49 @@ header div.welcome h1 {
 @media (min-width: 1024px) {
 
 
+}
+
+@media (max-width: 575.98px) {
+    .welcome .header-title {
+        font-size: 2.5rem !important;  /* Smaller font size on mobile */
+        margin-bottom: 1rem;
+        position: relative;
+        z-index: 2;
+    }
+
+    .welcome {
+        margin-bottom: 2rem;
+    }
+
+    .img-fluid {
+        max-height: 35vh;  /* Limit image height on mobile */
+        width: auto;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 576px) {
+    .welcome .header-title {
+        font-size: 2rem !important;
+        margin-bottom: 0.5rem;
+    }
+
+    .welcome {
+        margin-bottom: 1rem;
+    }
+
+    .welcome img {
+        max-height: 15vh;
+        width: auto;
+    }
+
+    .col-sm-6 img {
+        max-height: 50vh;
+        width: auto;
+    }
+
+    header.vh-100 {
+        min-height: 100vh;  /* Ensure minimum height in landscape */
+    }
 }
 
 
