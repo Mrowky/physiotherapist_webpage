@@ -1,5 +1,57 @@
 var ckyConfig = {
     cookies: {
+        necessary: [
+            {
+                name: "CookieYes Consent",
+                description: "Stores user consent preferences for the website",
+                cookies: [
+                    {
+                        name: "cky-consent",
+                        domain: ".apmfizjoterapia.pl"
+                    }
+                ]
+            }
+        ],
+        functional: [
+            {
+                name: "Website Functionality",
+                description: "Cookies required for basic website functionality",
+                cookies: [
+                    {
+                        name: "session",
+                        domain: ".apmfizjoterapia.pl"
+                    }
+                ]
+            }
+        ],
+        analytics: [
+            {
+                name: "Analytics Cookies",
+                description: "Cookies used to analyze website traffic and user behavior",
+                cookies: [
+                    {
+                        name: "_ga",
+                        domain: ".apmfizjoterapia.pl"
+                    },
+                    {
+                        name: "_gid",
+                        domain: ".apmfizjoterapia.pl"
+                    }
+                ]
+            }
+        ],
+        performance: [
+            {
+                name: "Performance Cookies",
+                description: "Cookies used to enhance website performance",
+                cookies: [
+                    {
+                        name: "_gat",
+                        domain: ".apmfizjoterapia.pl"
+                    }
+                ]
+            }
+        ],
         advertisement: [
             {
                 name: "Facebook",
