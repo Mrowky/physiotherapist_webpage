@@ -116,40 +116,8 @@ function checkSocialCookies() {
   }
 }
 
-// Function to check for Facebook cookies
-function checkFacebookCookies() {
-    const facebookCookies = document.cookie.split(';')
-        .map(cookie => cookie.trim())
-        .filter(cookie => {
-            const name = cookie.split('=')[0];
-            return ['datr', 'sb', 'c_user', 'xs', 'fr', 'oo'].includes(name);
-        });
-
-    if (facebookCookies.length > 0) {
-        // Update cookie configuration for Facebook cookies
-        const facebookConfig = ckyConfig.cookies.advertisement.find(item => item.name === "Facebook");
-        if (facebookConfig) {
-            facebookConfig.active = true;
-            // Update cookies list with actual cookies found
-            facebookConfig.cookies = facebookCookies.map(cookie => ({
-                name: cookie.split('=')[0],
-                domain: ".facebook.com"
-            }));
-        }
-    }
-}
-
-// Check for Facebook cookies periodically (every 5 seconds)
-setInterval(checkFacebookCookies, 5000);
-
 // Check cookie status when page loads
-document.addEventListener('DOMContentLoaded', () => {
-    checkSocialCookies();
-    checkFacebookCookies();
-});
+document.addEventListener('DOMContentLoaded', checkSocialCookies);
 
 // Listen for CookieYes consent changes
-document.addEventListener('cookieyes_consent_update', () => {
-    checkSocialCookies();
-    checkFacebookCookies();
-}); 
+document.addEventListener('cookieyes_consent_update', checkSocialCookies); 
