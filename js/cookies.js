@@ -81,7 +81,15 @@ var ckyConfig = {
                         name: "oo",
                         domain: ".facebook.com"
                     }
-                ]
+                ],
+                defaultConsent: false,
+                active: true,
+                info: {
+                    thirdParty: true,
+                    provider: "Facebook",
+                    purpose: "These cookies enable Facebook features and services on the website. They are set when you interact with Facebook elements like embedded posts or social plugins.",
+                    privacyPolicy: "https://www.facebook.com/policies/cookies/"
+                }
             }
         ]
     }
