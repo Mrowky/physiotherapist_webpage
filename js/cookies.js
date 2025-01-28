@@ -10,6 +10,22 @@ var ckyConfig = {
                         domain: ".apmfizjoterapia.pl"
                     }
                 ]
+            },
+            {
+                name: "Cloudflare CDN",
+                description: "Ciasteczka niezbędne do prawidłowego działania sieci dostarczania treści (CDN)",
+                cookies: [
+                    {
+                        name: "edgesessions_enabled",
+                        domain: ".cloudflare.com"
+                    }
+                ],
+                info: {
+                    thirdParty: true,
+                    provider: "Cloudflare",
+                    purpose: "Optymalizacja wydajności dostarczania treści poprzez sieć CDN",
+                    privacyPolicy: "https://www.cloudflare.com/privacypolicy/"
+                }
             }
         ],
         functional: [

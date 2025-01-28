@@ -8,7 +8,13 @@
 
 /* Header styles */
 
-
+.welcome {
+    padding-top: 50px;
+}
+.welcome img[src*="logo_bg_remove3"] {
+    max-height: 450px;
+    
+}
 
 /* Navbar styles */
 .bg-dark-transparent {
@@ -186,8 +192,13 @@
         margin-bottom: 2rem;
     }
 
-    .img-fluid {
-        max-height: 35vh;  /* Limit image height on mobile */
+    .welcome img[src*="logo_bg_remove3"] {
+        max-height: 30vh;  /* Limit image height on mobile */
+        width: auto;
+    }
+
+    .main-img {
+        max-height: 45vh;  /* Limit image height on mobile */
         width: auto;
     }
 }
